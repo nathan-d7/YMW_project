@@ -1,0 +1,42 @@
+.promo {
+  height: 560px;
+  padding-top: 50px;
+  background-color: #F0ECE9;
+}
+
+.promo__content-container {
+  /* max-width: 1280px;
+  margin: 0 auto;
+  width: 90%; */
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+}
+
+.promo__content-box {
+  flex: 0.7;
+}
+
+.promo__header {
+  font-size: 100px;
+  font-family: "Jost", sans-serif;
+  line-height: 120px;
+  margin-bottom: 20px;
+}
+
+.promo__text {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.promo__image-box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.promo__image {
+  object-fit: cover;
+  height: 100%;
+}
