@@ -1,13 +1,26 @@
-import type { FC } from "react"
+import { type FC, useRef } from "react"
 import Header from "./header"
 import Promo from "./promo"
 import Router from "../../router"
+import Footer from "./footer"
 
 
 const Layout: FC = () => {
+
+  const navigationRef = useRef<HTMLElement | null>(null)
+
+  const scrollToSection = () => {
+    if (navigationRef.current) {
+      navigationRef.current.scrollIntoView({
+        behavior: 'smooth', 
+        block: 'start',    
+      });
+    }
+  }
+
   return (
     <>
-      <Header />
+      <Header headerRef={navigationRef}/>
       <Promo />
       <div
         style={{
@@ -19,6 +32,7 @@ const Layout: FC = () => {
         }}
       >
         <Router />
+        <Footer onScrollToSection={scrollToSection}/>
       </div>
     </>
   )

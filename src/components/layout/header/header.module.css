@@ -15,7 +15,7 @@
 	flex: 1;
 }
 
-.header__image {
+/* .header__image {
 	object-fit: cover;
 }
 
@@ -23,15 +23,15 @@
 	cursor: pointer;
 	display: inline-block;
 	height: 100%;
-}
+} */
 
-.header__image-link svg path {
+/* .header__image-link svg path {
 	transition: all .2s linear;
-}
+} */
 
 .header__image-link:hover svg path {
-	fill:#FC90AB;
-	stroke: #626262;
+	fill:#fc90abb5;
+	stroke: #1F0314;
 }
 
 .header__nav-box {

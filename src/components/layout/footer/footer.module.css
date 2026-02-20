@@ -1,0 +1,43 @@
+.footer {
+  background-color: #1F0314;
+}
+
+.footer__container {
+  padding-block: 40px;
+}
+
+.footer__box {
+  display: flex;
+  gap: 40px;
+}
+
+.footer__info-box {
+  margin-left: 50px;
+}
+
+.footer__logo path {
+  fill: #fff;
+  transition: all .2s ease-in-out;
+}
+
+.footer__logo-box:hover .footer__logo path {
+  fill: #88466e;
+  cursor: pointer;
+}
+
+.footer__info-item {
+  color: #fff;
+  font-size: 18px;
+  transition: all .1s linear;
+}
+
+.footer__info-link:hover .footer__info-item,
+.footer__info-item:hover {
+  cursor: pointer;
+  color: hsl(0, 83%, 95%, 50%);
+}
+
+
+.footer__info-item:not(:last-child) {
+  margin-bottom: 12px;
+}

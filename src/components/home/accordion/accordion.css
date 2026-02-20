@@ -1,0 +1,52 @@
+.accordion-home {
+  padding: 40px 0 60px 0;
+  background-color: #FDE9E9;
+}
+
+.accordion-box {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  gap: 18px;
+}
+
+.accordion__title {
+  margin-bottom: 24px;
+}
+
+.accordion__item .MuiButtonBase-root{
+  padding: 0;
+}
+
+.accordion__item-heading.MuiTypography-root {
+  font-family: "Istok Web", serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.accordion__item.MuiPaper-root,
+.accordion__item.MuiPaper-root:first-of-type,
+.accordion__item.MuiPaper-root:last-of-type {
+  border-radius: 20px;
+  box-shadow: none;
+  padding: 24px;
+  max-height: 400px;
+}
+
+.accordion__item.MuiAccordion-root::before {
+  background-color: transparent;
+}
+
+
+.accordion__item-summery .MuiAccordionSummary-content {
+  margin: 0 0;
+}
+
+
+.accordion__item-text.MuiAccordionDetails-root {
+  padding-left: 0;
+  max-height: 250px;
+  font-family: "Jost", serif;
+  font-size: 17px;
+  font-weight: 500;
+}

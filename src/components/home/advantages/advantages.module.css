@@ -1,0 +1,40 @@
+.advantages {
+  padding: 100px 0;
+}
+
+.advantages__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.advantages__info-box {
+  display: flex;
+  gap: 50px;
+}
+
+.advantages__title {
+  margin-bottom: 40px;
+}
+
+.advantages__item {
+  height: 260px;
+  width: 216px;
+  padding: 25px;
+  border: 1px solid #000;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 30px 10px #E69AFF;
+}
+
+.advantages__item-title {
+  font-family: "Jost", serif;
+  font-size: 24px;
+  color: #560869;
+}
+
+.advantages__item-text {
+  font-size: 15px;
+  line-height: 18px;
+}
