@@ -24,12 +24,16 @@ return (
           <li className={style['header__nav-item']}>О нас</li>
         </Link>
         <li className={style['header__nav-item']}>
-          <DropDownMenu />
+          <Link to={'grades'}>
+            <DropDownMenu />
+          </Link>
         </li>
         <Link to={'articles'}>
           <li className={style['header__nav-item']}>Статьи</li>
         </Link>
-        <li className={style['header__nav-item']}>Стоимость</li>
+        <Link to={'subscription'}>
+          <li className={style['header__nav-item']}>Стоимость</li>
+        </Link>
       </nav>
     </header>
   </div>

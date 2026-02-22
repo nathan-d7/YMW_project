@@ -3,5 +3,7 @@ export type Article = {
   title: string,
   description: string,
   image: string,
-  content: string
+  likes: number,
+  content: string,
+  extendedContent: string
 }

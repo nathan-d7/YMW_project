@@ -1,0 +1,142 @@
+.subscr-page {
+  padding-block: 120px;
+}
+
+.subscr__title {
+  font-family: "Jost", serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 48px;
+  padding: 10px 18px;
+  border: 0.5px solid #000000c0;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.subscr__items-box {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+}
+
+.subscr__item {
+  flex-grow: 0;
+  flex-shrink: 1;
+  border: 1px solid #A4A0A0;
+  border-radius: 12px;
+  box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.37);
+  text-align: center;
+  font-size: 18px;
+  padding-bottom: 45px;
+  min-width: 380px;
+}
+
+.subscr__item.free-package {
+  background-color: rgba(255, 184, 186, 0.2);
+}
+
+.subscr__item.main-package {
+  background-color: rgba(214, 93, 254, 0.2);
+}
+
+.subscr__item.premium-package {
+  background-color: rgba(154, 216, 255, 0.2);
+}
+
+.subscr__item-title {
+  display: block;
+  font-family: "Jost", serif;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  border: 1px solid #A4A0A0;
+  padding: 30px 0px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+}
+
+
+.subscr__item-title::before {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+}
+
+.subscr__item-title.free-package-ico::before {
+  content: url("../../../assets/images/pricesImages/coin_icon.png");
+}
+
+.subscr__item-title.main-package-ico::before {
+  content: url("../../../assets/images/pricesImages/money_icon.png");
+}
+
+.subscr__item-title.premium-package-ico::before {
+  content: url("../../../assets/images/pricesImages/crown_icon.png");
+}
+
+.subscr__item-price-span {
+  display: block;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.subscr__item-text-box {
+  display: inline-block;
+  vertical-align: middle;
+  padding-inline: 40px;
+  font-weight: 600;
+  height: 225px;
+}
+
+.subscr__item-text {
+  font-weight: 400;
+}
+
+.subscr__item-text:first-of-type {
+  margin-top: 10px;
+}
+
+.subscr__image-box {
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 180px;
+  background-color: #fff;
+  margin-top: 50px;
+  border-radius: 12px;
+}
+
+.subscr__image-box.crystal-1-img {
+  background-image: url("../../../assets/images/pricesImages/magical_crystal_1.png");
+}
+
+.subscr__image-box.crystal-2-img {
+  background-image: url("../../../assets/images/pricesImages/magical_crystal_2.png"); 
+  background-size: 200px 160px;
+}
+
+.subscr__image-box.crystal-3-img {
+  background-image: url("../../../assets/images/pricesImages/magical_crystal_3.png"); 
+  background-size: 200px 180px;
+}
+
+.subscr__button {
+  margin-top: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 12px 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #000;
+  border: 0.3px solid #000;
+  box-shadow: 0 4px 12px 3px rgba(0, 0, 0, 0.25);
+  transition: box-shadow .2s ease-in;
+}
+
+.subscr__button:hover {
+  box-shadow: 0 4px 12px 3px  rgba(255, 184, 186, 0.2);
+}

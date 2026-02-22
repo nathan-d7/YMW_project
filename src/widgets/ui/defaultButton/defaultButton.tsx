@@ -1,4 +1,4 @@
-import type { CSSProperties, ElementType, FC, ReactElement } from "react"
+import type { CSSProperties, ElementType, FC } from "react"
 import style from "./defaultButton.module.css"
 import { Box } from "@mui/material"
 

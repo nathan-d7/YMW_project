@@ -26,8 +26,6 @@ const ArticlesPreview: FC = () => {
     fetchData()
   }, [])
 
-  console.log(articles)
-
   if (loading) return <p>Загрузка...</p>
   if (error) return <p>{error}</p>
 
@@ -36,7 +34,8 @@ const ArticlesPreview: FC = () => {
       <div className={`${style["articles__container"]} ${"container"}`}>
         <h3 className={style["articles__title"]}>Полезные статьи</h3>
         <div className={style["articles__items-box"]}>
-          {articles.map(article => (
+          {articles.map((article, index) => (
+            (index <= 3) ?
             <div key={article.id} className={style["articles__item"]}>
               <div className={style["articles__item-img"]} style={{backgroundImage: `url(${article.image})`}}></div>
               <div className={style["articles__item-info"]}>
@@ -44,8 +43,7 @@ const ArticlesPreview: FC = () => {
                 <p className={style["articles__item-desc"]}>{article.description}</p>
               </div>
               <span className={style["articles__item-link"]}>Перейти</span>
-              {/* <span className={style["articles__item-link"]}>Перейти</span> */}
-            </div>
+            </div> : null
           ))}
         </div>
       </div>

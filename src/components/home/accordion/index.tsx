@@ -1,5 +1,4 @@
 import { type FC, useState } from "react"
-// import style from "./accordion.module.css"
 import "../../../index.css"
 import Accordion from '@mui/material/Accordion'
 import AccordionSummary from '@mui/material/AccordionSummary'
