@@ -6,7 +6,7 @@ const SubscriptionPage: FC = () => {
   return (
     <section className={style["subscr-page"]}>
       <div className={`${style["subscr__container"]} ${"container"}`}>
-        <h2 className={style["subscr__title"]}>Подписка</h2>
+        <h2 className={`${style["subscr__title"]} ${"pageTitle"}`}>Подписка</h2>
 
         <div className={style["subscr__items-box"]}>
           <div className={`${style["subscr__item"]} ${style["free-package"]}`}>

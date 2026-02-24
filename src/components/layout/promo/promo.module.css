@@ -45,3 +45,13 @@
   object-fit: cover;
   height: 100%;
 }
+
+@media (max-width: 1024px) {
+  .promo__content-box {
+    flex: 0.5;
+  }
+
+  .promo__header {
+    font-size: 80px;
+  }
+}

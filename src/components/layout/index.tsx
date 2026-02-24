@@ -5,7 +5,6 @@ import Router from "../../router"
 import Footer from "./footer"
 import { useLocation } from "react-router-dom"
 
-
 const Layout: FC = () => {
 
   const [promoHomeImage, setPromoImage] = useState<boolean>(true)
@@ -35,6 +34,12 @@ const Layout: FC = () => {
 
   return (
     <>
+      {/* <div className={style["burger-menu-box"]}>
+        <span className={style["burger-menu__item"]}></span>
+        <span className={style["burger-menu__item"]}></span>
+        <span className={style["burger-menu__item"]}></span>
+      </div> */}
+
       <Header headerRef={navigationRef}/>
       <Promo promoImage={promoHomeImage}/>
       <div

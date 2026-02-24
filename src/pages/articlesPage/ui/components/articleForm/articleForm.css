@@ -1,0 +1,72 @@
+.article-form__container {
+  margin-top: 100px;
+  display: flex;
+  box-shadow: -2px 4px 5px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+}
+
+.article-form__info-box {
+  background-color: #C0A5C7;
+  padding: 50px 60px 10px 50px;
+  flex-basis: 60%;
+}
+
+.article-form__info-text {
+  padding-right: 50px;
+  font-family: "Jost", serif;
+  font-size: 24px;
+  color: #fff;
+  line-height: 32px;
+  margin-bottom: 30px;
+}
+
+.article-form__info-text:nth-child(2) {
+  display: flex;
+  align-items: flex-start;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.article-form__info-text:nth-child(2)::after {
+  display: block;
+  content: url("../../../../../assets/arrow_right_ico.png");
+  width: 60px;
+  margin-left: 12px;
+}
+
+.article-form__form-box {
+  padding: 50px 40px 10px 40px;
+  flex-grow: 1;
+  flex-basis: 40%;
+}
+
+.article-form__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-form__item .MuiOutlinedInput-root {
+  /* width: 100%; */
+  border-radius: 12px;
+  /* border: 1px solid rgba(0, 0, 0, 0.7); */
+}
+
+.article-form__item .MuiOutlinedInput-root.Mui-focused {
+  border: 0;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border: 1px solid rgba(0, 0, 0, 0.7);
+}
+
+.article-form__item:not(:last-child) div {
+  margin-bottom: 20px;
+}
+
+.article-form__item:nth-child(3) div {
+  margin-bottom: 10px;
+}
+
+.MuiFormLabel-root.MuiInputLabel-root.Mui-focused {
+  color: #FF799B;
+}

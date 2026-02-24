@@ -6,12 +6,21 @@ type DefaultBtnParams = {
   text: string,
   type?: 'button' | 'submit' | 'reset',
   componentType: ElementType,
-  style?: CSSProperties
+  styles?: CSSProperties,
+  disabled?: boolean
 }
 
-const DefaultBtn: FC<DefaultBtnParams> = ({text, type, componentType}) => {
+const DefaultBtn: FC<DefaultBtnParams> = ({text, type, componentType, styles, disabled}) => {
   return (
-    <Box component={componentType} className={style["defaultBtn"]} type={type}>{text}</Box>
+    <Box 
+      component={componentType} 
+      className={style["defaultBtn"]} 
+      type={type} 
+      style={styles}
+      disabled={disabled}
+    >
+      {text}
+    </Box>
   )
 }
 

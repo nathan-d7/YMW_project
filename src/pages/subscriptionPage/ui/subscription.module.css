@@ -2,7 +2,7 @@
   padding-block: 120px;
 }
 
-.subscr__title {
+/* .subscr__title {
   font-family: "Jost", serif;
   font-size: 32px;
   font-weight: 600;
@@ -12,7 +12,7 @@
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   margin-bottom: 30px;
-}
+} */
 
 .subscr__items-box {
   display: flex;

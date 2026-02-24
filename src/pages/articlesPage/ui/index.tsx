@@ -4,6 +4,7 @@ import "../../../index.css"
 import { type Article } from "../../../types/Article.ts"
 import { getArticles } from "../../../api/articlesApi/articlesApi.ts"
 import FavoriteIcon from '@mui/icons-material/Favorite'
+import ArticleForm from "./components/articleForm/index.tsx"
 
 //  type ArticleByIdProp = {
 //     getArticleById: (id: number) => Article
@@ -94,6 +95,7 @@ const ArticlesPage: FC = () => {
             </div>
           ))}
         </ul>
+        <ArticleForm />
       </div>
     </section>
   )

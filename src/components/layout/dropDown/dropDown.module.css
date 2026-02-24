@@ -5,14 +5,14 @@
 
 .drop-down__open {
   display: grid;
-  grid-template-columns: repeat(3, 80px);
+  grid-template-columns: repeat(3, minmax(80px, 1fr));
   gap: 12px;
   position: absolute;
   background-color: #fff;
   padding: 10px 12px;
   top: 140%;
   border-radius: 10px;
-  box-shadow: 9px 9px 32px -13px #b0b0b0;
+  box-shadow: 9px 9px 32px -13px #888787;
 }
 
 .drop-down__item {
@@ -27,4 +27,31 @@
 .drop-down__item:hover {
   text-shadow: 0 3px 4px #ffa9ef;
   color: #343232;
+}
+
+@media (max-width: 1024px) {
+  .drop-down-box {
+    color: #fff;
+  }
+
+  .drop-down__open {
+    position: static;
+    color:  #343232;
+    grid-template-columns: repeat(auto-fill, 100%);
+    background-color: #ffa9efec;
+    color: #626262;
+    border-radius: 8x;
+  }
+
+  .drop-down__item {
+    font-weight: 800;
+  }
+
+  .drop-down__item:not(:nth-child(3n)) {
+    border-right: 0px
+  }
+
+  .drop-down__item:not(:last-child) {
+    border-bottom: 0.5px solid #7b7a7ad6;
+  }
 }

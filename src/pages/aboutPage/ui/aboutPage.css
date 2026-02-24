@@ -1,0 +1,45 @@
+.aboutUs-page {
+  padding-block: 100px 120px;
+}
+
+.aboutUs-page__title {
+  margin-bottom: 25px;
+}
+
+.aboutUs-page__content-box {
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+} 
+
+.aboutUs-page__image-box {
+  flex-basis: 40%;
+}
+
+.aboutUs-page__image {
+  object-fit: contain;
+  display: block;
+  width: 100%;
+  margin: auto 0;
+}
+.aboutUs-page__text-box {
+  flex-basis: 60%;
+  line-height: 150%;
+}
+
+.aboutUs-page__points-box {
+  list-style: circle;
+}
+
+.aboutUs-page__points-box li {
+  padding: 2px 4px;
+}
+
+.aboutUs-page__points-box li:nth-child(2n - 1) {
+  background-color: #FDE9E9;
+}
+
+.aboutUs-page__points-box, 
+.aboutUs-page__text-box  p {
+  margin-bottom: 15px;
+}

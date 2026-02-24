@@ -1,0 +1,134 @@
+.header-container {
+	/* max-width: 1280px;
+  margin: 0 auto;
+  width: 90%; */
+	padding-inline: 6px;
+}
+
+
+.burger-menu-box {
+	display: none;
+	width: 50px;
+	height: 50px;
+	padding: 4px 4px;
+	border-radius: 50%;
+	box-shadow: 0 4px 10px #1f03145d;
+	gap: 4px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	background-color: #FC90AB;
+	z-index: 4;
+}
+
+.burger-menu__item {
+	display: none;
+	width: 70%;
+	height: 4px;
+	background-color: #edecec;
+	border-radius: 4px;
+}
+
+.burger-menu__effect {
+	gap: 0;
+	background-color: #fc90abd3;
+}
+
+.burger-menu__item-efffect {
+	height: 2px;
+	padding: 0;
+	width: 60%;
+}
+
+.burger-menu__item-efffect:first-child {
+	transform: translateY(2px) rotate(45deg);
+	transition: all .5s linear;
+}
+
+.burger-menu__item-efffect:nth-child(2) {
+	opacity: 0;
+	transition: all .2s linear;
+}
+
+.burger-menu__item-efffect:last-child {
+	transform: translateY(-2px) rotate(-45deg);
+	transition: all .5s linear;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	padding-block: 10px;
+}
+
+.header__image-box {
+	flex: 1;
+}
+
+.header__image-link:hover svg path {
+	fill:#fc90abb5;
+	stroke: #1F0314;
+}
+
+.header__nav-box {
+	display: flex;
+	gap: 40px;
+	flex: 2;
+}
+
+.header__nav-item {
+	font-size: 18px;
+	padding: 6px;
+	border-bottom: 2px solid transparent;
+	transition: border-bottom .2s linear;
+}
+
+.header__nav-item:hover {
+	border-bottom: 2px solid #FC90AB;
+	cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+	#root {
+		border: 2px solid black;
+	}
+
+	.burger-menu-box {
+		display: flex;
+	}
+
+	.burger-menu__item {
+		display: inline-block;
+	}
+
+	.header__nav-box {
+		display: none;
+		padding: 20% 24px 0 24px;
+		background-color: rgba(143, 135, 135, 0.716);
+		flex-direction: column;
+		gap: 8px;
+		flex: 0;
+		position: absolute;
+		width: 500px;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: 3;
+	}
+
+	.header__nav-box_open {
+		display: flex;
+	}
+
+	.header__nav-item {
+		display: inline-block;
+		padding: 0;
+		font-weight: 600;
+		color: #fff;
+		font-size: 28px;
+		letter-spacing: 1.2px;
+	}
+}

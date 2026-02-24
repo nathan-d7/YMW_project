@@ -1,9 +1,10 @@
-import { type FC, type RefObject } from "react";
-import style from "./header.module.css"
+import { useState, type FC, type RefObject } from "react"
+import "./header.css"
 import "../../../index.css"
-import DropDownMenu from "../dropDown";
-import { Link } from "react-router-dom";
+import DropDownMenu from "../dropDown"
+import { Link } from "react-router-dom"
 import YMWLogo from "../../../assets/ymw_logo.svg?react"
+
 
 type HeaderProps = {
   headerRef: RefObject<HTMLElement | null>
@@ -11,34 +12,52 @@ type HeaderProps = {
 
 const Header: FC<HeaderProps> = ({headerRef}) => {
 
-return (
+  const [menuIsOpen, setMenuOpen] = useState<boolean>(false)
 
-  <div className={style['header-container']}>
-    <header ref={headerRef} className={`${style['header']} ${'container'}`}>
-      <div className={style['header__image-box']}>
-        {/* <img draggable={false} src={ymwLogo} className={style['header__image']} />   */}
-        <Link className={`${style['header__image-link']} ${"logo-link"}`} to={'/'}><YMWLogo className={`${style['header__image']} ${"logo"}`}/></Link> 
-      </div>
-      <nav className={style['header__nav-box']}>
-        <Link to={'about'}>
-          <li className={style['header__nav-item']}>О нас</li>
-        </Link>
-        <li className={style['header__nav-item']}>
-          <Link to={'grades'}>
-            <DropDownMenu />
+  const handleOpenMenu = () => {
+    setMenuOpen(prev => !prev)
+  }
+
+  return (
+
+    <div className="header-container">
+      <header ref={headerRef} className={`header container`}>
+
+        <div 
+          onClick={handleOpenMenu} 
+          className={`burger-menu-box ${(menuIsOpen) ? "burger-menu__effect" : ""}`}
+        >
+
+          <span className={`burger-menu__item ${(menuIsOpen) ? "burger-menu__item-efffect" : ""}`}></span>
+          <span className={`burger-menu__item ${(menuIsOpen) ? "burger-menu__item-efffect" : ""}`}></span>
+          <span className={`burger-menu__item ${(menuIsOpen) ? "burger-menu__item-efffect" : ""}`}></span>
+
+        </div>
+
+        <div className="header__image-box">
+          <Link className={`header__image-link logo-link`} to={'/'}><YMWLogo className={`header__image logo`}/></Link> 
+        </div>
+
+        <nav className={`header__nav-box ${menuIsOpen ? "header__nav-box_open" : ""}`}>
+          <Link to={'about'}>
+            <li className="header__nav-item">О нас</li>
           </Link>
-        </li>
-        <Link to={'articles'}>
-          <li className={style['header__nav-item']}>Статьи</li>
-        </Link>
-        <Link to={'subscription'}>
-          <li className={style['header__nav-item']}>Стоимость</li>
-        </Link>
-      </nav>
-    </header>
-  </div>
+          <li className="header__nav-item">
+            <Link to={'grades'}>
+              <DropDownMenu />
+            </Link>
+          </li>
+          <Link to={'articles'}>
+            <li className="header__nav-item">Статьи</li>
+          </Link>
+          <Link to={'subscription'}>
+            <li className="header__nav-item">Стоимость</li>
+          </Link>
+        </nav>
+      </header>
+    </div>
 
-)
+  )
 
 }
 
