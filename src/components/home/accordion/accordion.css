@@ -30,7 +30,8 @@
   border-radius: 20px;
   box-shadow: none;
   padding: 24px;
-  max-height: 400px;
+  min-height: 50px;
+  /* max-height: fit-content; */
 }
 
 .accordion__item.MuiAccordion-root::before {
@@ -45,8 +46,28 @@
 
 .accordion__item-text.MuiAccordionDetails-root {
   padding-left: 0;
-  max-height: 250px;
+  min-height: 250px;
   font-family: "Jost", serif;
   font-size: 17px;
   font-weight: 500;
+}
+
+
+@media (max-width: 1152px) {
+  .accordion__item-heading.MuiTypography-root {
+    font-size: 18px;
+    text-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .accordion-box {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .accordion__item-heading.MuiTypography-root {
+    flex: 0.9;
+  }
 }

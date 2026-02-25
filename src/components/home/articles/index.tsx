@@ -36,14 +36,14 @@ const ArticlesPreview: FC = () => {
         <div className={style["articles__items-box"]}>
           {articles.map((article, index) => (
             (index <= 3) ?
-            <div key={article.id} className={style["articles__item"]}>
+            <article key={article.id} className={style["articles__item"]}>
               <div className={style["articles__item-img"]} style={{backgroundImage: `url(${article.image})`}}></div>
               <div className={style["articles__item-info"]}>
                 <span className={style["articles__item-title"]}>{article.title}</span>
                 <p className={style["articles__item-desc"]}>{article.description}</p>
               </div>
               <span className={style["articles__item-link"]}>Перейти</span>
-            </div> : null
+            </article> : null
           ))}
         </div>
       </div>

@@ -1,5 +1,5 @@
 import type { FC } from "react"
-import "../layout/promo/promo.module.css"
+import "../layout/promo/promo.css"
 
 type StyledTextProps = {
     text: string

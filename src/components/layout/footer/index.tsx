@@ -23,7 +23,8 @@ const Footer: FC<FooterProps> = ({onScrollToSection}) => {
             </Link>
           </div>
           <div className={style["footer__info-left-box"]}>
-            <ul className={style["footer__info-left-box"]}>
+            {/* <ul className={style["footer__info-left-box"]}> */}
+            <ul>
               <li className={style["footer__info-item"]}>
                 Your Magic Wand 2026
               </li>
@@ -43,7 +44,8 @@ const Footer: FC<FooterProps> = ({onScrollToSection}) => {
             </ul>
           </div>
           <div className={style["footer__info-right-box"]}>
-            <ul className={style["footer__info-box"]}>
+            {/* <ul className={style["footer__info-box"]}> */}
+            <ul>
               <Link to={"/about"} className={`${style["footer__info-link"]} ${style["footer__info-item"]}`}>
                 <li className={style["footer__info-item"]}>
                   О нас

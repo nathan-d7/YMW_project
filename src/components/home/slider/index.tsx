@@ -13,7 +13,7 @@ import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp'
 const Slider: FC = () => {
 
   const imageURLs: string[] = [card1, card2, card3, card4]
-  const imageText: string[] = ['Документация', 'Готовые материалы', 'Календарно-Тематическое Планирование', 'Полезные статьи']
+  const imageText: string[] = ['Документация', 'Готовые материалы', 'Календарно - Тематическое Планирование', 'Полезные статьи']
   const [imageIndex, setImageIndex] = useState(0)
   const [imageTextItem, setImageText] = useState('')
 

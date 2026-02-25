@@ -79,3 +79,40 @@
 .footer__socials-item:hover path {
   fill: #88466e;
 } 
+
+@media (max-width: 1152px) {
+
+  .footer__box {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer__logo-box {
+    width: 6%;
+  }
+
+  .footer__info-left-box, 
+  .footer__info-right-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 426px) {
+  .footer__box {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: stretch;
+  }
+
+  .footer__info-left-box, 
+  .footer__info-right-box {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .footer__logo-box  {
+    width: 12%;
+  }
+}
