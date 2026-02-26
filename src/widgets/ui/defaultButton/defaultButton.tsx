@@ -7,7 +7,7 @@ type DefaultBtnParams = {
   type?: 'button' | 'submit' | 'reset',
   componentType: ElementType,
   styles?: CSSProperties,
-  disabled?: boolean
+  disabled?: boolean,
 }
 
 const DefaultBtn: FC<DefaultBtnParams> = ({text, type, componentType, styles, disabled}) => {

@@ -12,16 +12,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 70%;
+  min-width: 40%;
+  max-width: 80%;
   padding: 25px 40px;
   border-radius: 12px;
-  background-color: rgba(255, 194, 204, 0.966);
+  background-color: rgb(255, 194, 204);
   position: absolute;
   left: 50%;
   top: 80%;
   transform: translate(-50%, -50%);
 }
-
 
 .form-modal__img-block {
   margin-block: 18px;
@@ -32,6 +32,7 @@
   display: block;
   object-fit: cover;
   margin: 0 auto;
+  width: 60%;
 }
 
 .form-modal__message {
@@ -41,7 +42,7 @@
   font-size: 28px;
   font-weight: 500;
   text-align: center;
-  width: 80%;
+  width: 100%;
 }
 
 .form-modal__close-button {
@@ -49,4 +50,32 @@
   top: 16px;
   right: 16px;
   transition: all .2s ease-in-out;
+}
+
+@media(max-width: 1025px) {
+  .form-modal__message {
+    font-size: 24px;
+  }
+  
+  .form-modal__img {
+    width: 60%;
+  }
+}
+
+@media(max-width: 801px) {
+  .form-modal__box {
+    padding: 20px;
+  }
+}
+
+@media(max-width: 861px) {
+  .form-modal__img {
+    width: 70%;
+  }
+}
+
+@media(max-width: 426px) {
+  .form-modal__box {
+    width: 300px;
+  }
 }

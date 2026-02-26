@@ -1,5 +1,5 @@
 import type { FC } from "react"
-import formImg from "../../../../../../assets/images/promo_bg_sup.png"
+import formImg from "../../../../../../assets/images/formModalImages/form_modal_bg.png"
 import "./formModal.css"
 import { IconButton } from "@mui/material"
 import CloseIcon from '@mui/icons-material/Close'
@@ -17,7 +17,7 @@ const FormModal: FC<FormModalProp> = ({setModal}) => {
         </div>
         <p className="form-modal__message">
           Предложение успешно отправлено
-          Спасибо за вашу идею!
+          <br></br>Спасибо за вашу идею!
         </p>
 
         <IconButton

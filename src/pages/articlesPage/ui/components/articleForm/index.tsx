@@ -61,7 +61,6 @@ const ArticleForm: FC = () => {
     backgroundColor: "#C0A5C7",
     border: "0.3px solid #000",
     width: "130px",
-    margin: "0 auto"
   }
 
 
@@ -107,14 +106,16 @@ const ArticleForm: FC = () => {
             onBlur={handleBlur}
             className="article-form__item" />
 
-            <DefaultBtn 
-              type={'submit'} 
-              componentType={'button'} 
-              text={'Отправить'} 
-              styles={styledButton}
-              disabled={isSubmitting}
-            >
-            </DefaultBtn>
+            <div className="article-form__send-btn">
+              <DefaultBtn 
+                type={'submit'} 
+                componentType={'button'} 
+                text={'Отправить'} 
+                styles={styledButton}
+                disabled={isSubmitting}
+              >
+              </DefaultBtn>
+            </div>
 
             {openModal && <FormModal setModal={setModalOpen}/>}
 

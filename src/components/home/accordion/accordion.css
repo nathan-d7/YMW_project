@@ -71,3 +71,11 @@
     flex: 0.9;
   }
 }
+
+@media (max-width: 376px) {
+  .accordion__item.MuiPaper-root,
+  .accordion__item.MuiPaper-root:first-of-type,
+  .accordion__item.MuiPaper-root:last-of-type {
+    padding: 18px;
+  }
+}

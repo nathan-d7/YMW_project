@@ -65,9 +65,13 @@
   color: #FC5A83;
 }
 
-@media (max-width: 1152px) {
+@media (max-width: 1153px) {
   .articles__items-box {
     gap: 20px;
+  }
+
+  .articles__item:last-child {
+    display: none;
   }
 
   .articles__item-link {
@@ -83,9 +87,6 @@
     justify-content: space-evenly;
   }
 
-  .articles__item:last-child {
-    display: none;
-  }
 }
 
 @media (max-width: 800px) {
@@ -108,9 +109,10 @@
 
   .articles__items-box {
     gap: 14px;
+    justify-content: center;
   }
 
   .articles__item {
-    max-width: 100%;
+    max-width: 90%;
   }
 }

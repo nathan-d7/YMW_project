@@ -9,6 +9,8 @@
   background-color: #C0A5C7;
   padding: 50px 60px 10px 50px;
   flex-basis: 60%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 
 .article-form__info-text {
@@ -38,6 +40,8 @@
   padding: 50px 40px 10px 40px;
   flex-grow: 1;
   flex-basis: 40%;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .article-form__form {
@@ -70,3 +74,73 @@
 .MuiFormLabel-root.MuiInputLabel-root.Mui-focused {
   color: #FF799B;
 }
+
+.article-form__send-btn {
+  margin: 0 auto;
+}
+
+
+@media (max-width: 1025px) {
+  .article-form__info-box {
+    flex-basis: 50%;
+  }
+
+  .article-form__info-box, 
+  .article-form__form-box {
+    padding-inline: 20px;
+  }
+
+}
+ 
+@media (max-width: 801px) {
+  .article-form__container {
+    flex-direction: column;
+  }
+
+  .article-form__form-box {
+    padding-block: 25px;
+  }
+
+  .article-form__info-box {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 0;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+  }
+
+  .article-form__info-text:nth-child(2)::after {
+    display: none;
+  }
+
+  .article-form__info-text {
+    padding-right: 0;
+  }
+
+  .article-form__info-text:first-child {
+    max-width: 80%;
+    font-weight: 600;
+  }
+
+  .article-form__info-text:nth-child(2) {
+    display: inline-block;
+  }
+
+  .article-form__send-btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+}
+
+@media (max-width: 426px) {
+  .article-form__info-text {
+    font-size: 20px;
+  }
+
+ .article-form__info-text:first-child {
+    max-width: 100%;
+  }
+} 
