@@ -17,9 +17,9 @@
   padding: 25px 40px;
   border-radius: 12px;
   background-color: rgb(255, 194, 204);
-  position: absolute;
+  position: fixed;
   left: 50%;
-  top: 80%;
+  top: 50%;
   transform: translate(-50%, -50%);
 }
 
@@ -77,5 +77,9 @@
 @media(max-width: 426px) {
   .form-modal__box {
     width: 300px;
+  }
+
+  .form-modal__message {
+    font-size: 22px;
   }
 }

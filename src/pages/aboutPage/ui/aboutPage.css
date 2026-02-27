@@ -8,31 +8,56 @@
 
 .aboutUs-page__content-box {
   display: flex;
-  gap: 50px;
-  align-items: flex-start;
+  gap: 20px;
+  align-items: stretch;
+  font-size: 17px;
+  border: 0.5px solid #000000c0;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 } 
 
 .aboutUs-page__image-box {
-  flex-basis: 40%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
 }
 
-.aboutUs-page__image {
-  object-fit: contain;
-  display: block;
-  width: 100%;
-  margin: auto 0;
+.aboutUs-page__image-bottom-filler {
+  background-color: rgba(202, 202, 202, 0.5);
+  border-bottom-left-radius: 12px;
 }
+
 .aboutUs-page__text-box {
-  flex-basis: 60%;
   line-height: 150%;
+  padding-block: 10px;
+  padding-right: 16px;
+  flex: 1;
+}
+
+.aboutUs-page__text-box span {
+  font-weight: 700;
 }
 
 .aboutUs-page__points-box {
-  list-style: circle;
+  list-style: none;
 }
 
 .aboutUs-page__points-box li {
-  padding: 2px 4px;
+  padding-block: 2px;
+}
+
+.aboutUs-page__points-box li::before {
+  content: '';
+  display: inline-block;
+  vertical-align: sub;
+  width: 18px;
+  height: 18px;
+  object-fit: cover;
+  background-image: url('../../../assets/images/star_marker.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-right: 8px;
 }
 
 .aboutUs-page__points-box li:nth-child(2n - 1) {
@@ -42,4 +67,84 @@
 .aboutUs-page__points-box, 
 .aboutUs-page__text-box  p {
   margin-bottom: 15px;
+}
+
+.hide-text-btn {
+  display: none;
+  font-weight: 600;
+  font-size: 18px;
+  color: #353535;
+  margin-top: 12px;
+}
+
+@media (max-width: 1025px) {
+  .aboutUs-page__content-box {
+    display: block;
+  }
+
+  .aboutUs-page__image-bottom-filler {
+    display: none;
+  }
+
+  .aboutUs-page__image-box {
+    display: block;
+    float: left;
+    margin-right: 20px;
+  }
+
+  .aboutUs-page__text-box {
+    padding-left: 16px;
+  }
+
+}
+
+@media (max-width: 601px) {
+  .aboutUs-page__content-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  .aboutUs-page__image-box {
+    margin-right: 0;
+  }
+
+  .aboutUs-page__image-box,
+  .aboutUs-page__image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+  }
+
+  .aboutUs-page__image {
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 426px) {
+  .aboutUs-page__image-box,
+  .aboutUs-page__image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+
+  .clipped-text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+  }
+
+  .non-clipped-text {
+    display: block;
+  }
+
+  .hide-text-btn_active {
+    display: block;
+  }
+
 }

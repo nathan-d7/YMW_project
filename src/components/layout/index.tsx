@@ -34,26 +34,10 @@ const Layout: FC = () => {
 
   return (
     <>
-      {/* <div className={style["burger-menu-box"]}>
-        <span className={style["burger-menu__item"]}></span>
-        <span className={style["burger-menu__item"]}></span>
-        <span className={style["burger-menu__item"]}></span>
-      </div> */}
-
       <Header headerRef={navigationRef}/>
       <Promo promoImage={promoHomeImage}/>
-      <div
-        style={{
-          // height: 'calc(100vh - 60px)',
-          // height: '100vh',
-          // overflow: 'hidden',
-          // display: 'flex',
-          // justifyContent: 'center'
-        }}
-      >
-        <Router />
-        <Footer onScrollToSection={scrollToSection}/>
-      </div>
+      <Router />
+      <Footer onScrollToSection={scrollToSection}/>
     </>
   )
 }

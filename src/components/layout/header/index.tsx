@@ -18,6 +18,7 @@ const Header: FC<HeaderProps> = ({headerRef}) => {
     setMenuOpen(prev => !prev)
   }
 
+
   return (
 
     <div className="header-container">
@@ -28,9 +29,15 @@ const Header: FC<HeaderProps> = ({headerRef}) => {
           className={`burger-menu-box ${(menuIsOpen) ? "burger-menu__effect" : ""}`}
         >
 
-          <span className={`burger-menu__item ${(menuIsOpen) ? "burger-menu__item-efffect" : ""}`}></span>
-          <span className={`burger-menu__item ${(menuIsOpen) ? "burger-menu__item-efffect" : ""}`}></span>
-          <span className={`burger-menu__item ${(menuIsOpen) ? "burger-menu__item-efffect" : ""}`}></span>
+          <span 
+            className={`burger-menu__item ${(menuIsOpen) ? "burger-menu__item-efffect" : ""}`} 
+            style={{backgroundColor: `${menuIsOpen ? '#fff' : ''}`}}></span>
+          <span 
+            className={`burger-menu__item ${(menuIsOpen) ? "burger-menu__item-efffect" : ""}`} 
+            style={{backgroundColor: `${menuIsOpen ? '#fff' : ''}`}}></span>
+          <span 
+            className={`burger-menu__item ${(menuIsOpen) ? "burger-menu__item-efffect" : ""}`} 
+            style={{backgroundColor: `${menuIsOpen ? '#fff' : ''}`}}></span>
 
         </div>
 
