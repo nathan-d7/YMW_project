@@ -42,7 +42,6 @@ const Slider: FC = () => {
         <div className={style["slider__box"]}>
           <div className={style["slider__img-item-box"]}>
             {imageURLs.map(url => (
-              // <img key={url} src={url} className={style["slider__img"]} style={{ transform: `translateX(${-100 * imageIndex}%)` }}/>
               <div key={url} className={style["slider__item"]} style={{ transform: `translateX(${-100 * imageIndex}%)`, backgroundImage: `url(${url})` }}>
                  <span className={style["slider__item-text"]}>{imageTextItem}</span>
               </div>

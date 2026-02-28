@@ -3,7 +3,7 @@ import "./articleForm.css"
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 import { Box, Typography, TextField } from "@mui/material"
-import DefaultBtn from "../../../../../widgets/ui/defaultButton/defaultButton"
+import DefaultBtn from "../../../../../shared/ui/defaultButton/defaultButton"
 import axios from "axios"
 import FormModal from "./formSentModal"
 

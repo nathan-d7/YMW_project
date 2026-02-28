@@ -104,9 +104,20 @@
 }
 
 @media(max-width: 601px) {
+  .articles-page__articles-box {
+    position: relative;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    overflow: hidden;
+  }
+
   .articles-page__item {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 40px;
   }
 
+  .articles-page__item-info-box {
+    margin: 0 12px;
+  }
+  
 }

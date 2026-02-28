@@ -29,7 +29,7 @@
   text-align: center;
   font-size: 18px;
   padding-bottom: 45px;
-  min-width: 380px;
+  max-width: 380px;
 }
 
 .subscr__item.free-package {
@@ -88,7 +88,7 @@
 .subscr__item-text-box {
   display: inline-block;
   vertical-align: middle;
-  padding-inline: 40px;
+  padding-inline: 30px;
   font-weight: 600;
   height: 225px;
 }
@@ -139,4 +139,76 @@
 
 .subscr__button:hover {
   box-shadow: 0 4px 12px 3px  rgba(255, 184, 186, 0.2);
+}
+
+@media (max-width: 1281px) {
+  .subscr__items-box {
+    gap: 10px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .subscr__item-text-box {
+    padding-inline: 20px;
+  }
+}
+
+@media (max-width: 1153px) {
+  .subscr__items-box {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .subscr__item {
+    max-width: 48%;
+    flex-grow: 1;
+  }
+
+  .subscr__item:last-child {
+    margin: 0 auto;
+  }
+
+  .subscr__image-box {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 801px) {
+  .subscr__items-box {
+    justify-content: center;
+  }
+
+  .subscr__item {
+    max-width: 80%;
+    padding-bottom: 20px;
+  }
+
+  .subscr__item-title {
+    padding-block: 25px;
+  }
+}
+
+@media (max-width: 426px) {
+  .subscr__items-box {
+    gap: 50px;
+  }
+
+  .subscr__item {
+    max-width: 100%;
+    padding: 10px 20px 20px 20px;
+    box-shadow: none;
+  }
+
+  .subscr__image-box {
+    display: none;
+  }
+
+  .subscr__item-text-box {
+    height: auto;
+    padding-inline: 0;
+  }
+
+  .subscr__item-title {
+    font-size: 22px;
+  }
 }

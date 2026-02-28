@@ -1,0 +1,37 @@
+.slider-buttons-box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.slider-buttons-box_hidden {
+  display: none;
+}
+
+.slider-btn {
+  all: unset;
+  cursor: pointer;
+  margin-inline: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all .2s ease-in-out;
+  margin-inline: 0;
+}
+
+.slider-btn > svg {
+  transform: translate(35%, 15%);
+}
+
+.slider-btn > *,
+.slider-btn > * > * path > {
+  stroke: #414141;
+  fill: #414141;
+}
+
+.slider-btn:hover {
+  background-color: rgba(238, 238, 238, 0.516);
+}

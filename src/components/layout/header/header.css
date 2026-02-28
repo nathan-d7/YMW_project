@@ -165,9 +165,19 @@
 	.header__nav-box {
 		width: 100%;
 		align-items: center;
+		overflow-x: auto;
 	}
 
 	.header__nav-item {
 		font-size: 28px;
+		width: 100%;
+		text-align: center;
 	}
+
+	.header__nav-item a {
+		display: inline-block;
+		width: 90%;
+		text-align: center;
+	}
+
 }

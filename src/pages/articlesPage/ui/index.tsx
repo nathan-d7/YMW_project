@@ -5,11 +5,8 @@ import { type Article } from "../../../types/Article.ts"
 import { getArticles } from "../../../api/articlesApi/articlesApi.ts"
 import FavoriteIcon from '@mui/icons-material/Favorite'
 import ArticleForm from "./components/articleForm/index.tsx"
-
-//  type ArticleByIdProp = {
-//     getArticleById: (id: number) => Article
-//   }
-
+import SliderButton from "../../../shared/ui/sliderButtons/sliderButton.tsx"
+import { useWindowSize } from "../../../hooks/windowSizeHook/windowSize.ts"
 
 
 const ArticlesPage: FC = () => {
@@ -20,6 +17,21 @@ const ArticlesPage: FC = () => {
   const [loading, setLoading] = useState<boolean>(true)
   const [error, setError] = useState<string | null>(null)
   const [likedArticlesId, setLikedArticles] = useState<likedArticleIds>([])
+  const [sliderHidden, setSliderHidden] = useState<boolean>(true)
+  const articlesIndexes = articles.map((_, index) => index)
+  const [slideIndex, setSlideIndex] = useState(0)
+  let windowSize = useWindowSize()
+
+  useEffect(() => {
+    if (windowSize <= 600) {
+      setSliderHidden(false)
+      console.log('Кнопки появились!');
+    } else {
+      setSliderHidden(true)
+      console.log('Кнопки спрятаны!');
+    }
+  }, [windowSize]);
+
   
   const fetchData = async () => {
     try {
@@ -42,6 +54,22 @@ const ArticlesPage: FC = () => {
 
   if (loading) return <p>Загрузка...</p>
   if (error) return <p>{error}</p>
+
+
+  const showNextSlide = () => {
+  setSlideIndex( prev => {
+    if(prev === articlesIndexes.length - 1) return 0
+    return prev + 1
+  })
+  }
+
+  const showPrevSlide = () => {
+    setSlideIndex( prev => {
+      if(prev === 0) return articlesIndexes.length - 1
+      return prev - 1
+    })
+  }
+
 
  const handleLikes = (articleId: number) => {
     const isLiked = likedArticlesId.includes(articleId)
@@ -75,9 +103,15 @@ const ArticlesPage: FC = () => {
     <section className={style["articles-page"]}>
       <div className={`${style["articles-page__container"]} ${"container"}`}>
         <h3 className={style["articles-page__title"]}>Полезные статьи</h3>
-        <ul className={style["articles-page__articles-box"]}>
+        <ul className={style["articles-page__articles-box"]}> 
           {articles.map(article => (
-            <div key={article.id}  className={style["articles-page__item"]}>
+            <div 
+              key={article.id} 
+              className={style["articles-page__item"]} 
+              style={{transform: sliderHidden ? 
+                "translateX(0)" : 
+                `translateX(${-100 * slideIndex}%)`, transition: "transform 0.4s ease"}}
+            >
               <div className={style["articles-page__item-img-box"]}>
                 <img className={style["articles-page__item-img"]} src={article.image} alt={article.title} />
               </div>
@@ -94,6 +128,7 @@ const ArticlesPage: FC = () => {
               </div>
             </div>
           ))}
+          <SliderButton showNextSlide={showNextSlide} showPrevSlide={showPrevSlide} hidden={sliderHidden} />
         </ul>
         <ArticleForm />
       </div>

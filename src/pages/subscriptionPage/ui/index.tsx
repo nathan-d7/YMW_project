@@ -1,6 +1,7 @@
 import type { FC } from "react"
 import style from "./subscription.module.css"
 import "../../../index.css"
+import { formatPrice } from "../../../shared/ui/formatPrice/formatPrice"
 
 const SubscriptionPage: FC = () => {
   return (
@@ -11,7 +12,7 @@ const SubscriptionPage: FC = () => {
         <div className={style["subscr__items-box"]}>
           <div className={`${style["subscr__item"]} ${style["free-package"]}`}>
             <span className={`${style["subscr__item-title"]} ${style["free-package-ico"]}`}>Тариф Бесплатный</span>
-            <span className={style["subscr__item-price-span"]}>Стоимость: 0 R</span>
+            <span className={style["subscr__item-price-span"]}>Стоимость: {formatPrice(0)}/месяц</span>
             <ul className={style["subscr__item-text-box"]}>
               Что входит:
               <li className={style["subscr__item-text"]}>5 материалов в день (ограниченный доступ)</li>
@@ -25,7 +26,7 @@ const SubscriptionPage: FC = () => {
   
           <div className={`${style["subscr__item"]} ${style["main-package"]}`}>
             <span className={`${style["subscr__item-title"]} ${style["main-package-ico"]}`}>Тариф основной</span>
-            <span className={style["subscr__item-price-span"]}>Стоимость: 299 R/месяц</span>
+            <span className={style["subscr__item-price-span"]}>Стоимость: {formatPrice(299)}/месяц</span>
             <ul className={style["subscr__item-text-box"]}>
               Что входит:
               <li className={style["subscr__item-text"]}>Все из бесплатного тарифа</li>
@@ -39,7 +40,7 @@ const SubscriptionPage: FC = () => {
 
           <div className={`${style["subscr__item"]} ${style["premium-package"]}`}>
             <span className={`${style["subscr__item-title"]} ${style["premium-package-ico"]}`}>Тариф Премиум</span>
-            <span className={style["subscr__item-price-span"]}>Стоимость: 990 R/месяц</span>
+            <span className={style["subscr__item-price-span"]}>Стоимость: {formatPrice(990)}/месяц</span>
             <ul className={style["subscr__item-text-box"]}>
               Что входит:
               <li className={style["subscr__item-text"]}>Все из базового тарифа</li>
