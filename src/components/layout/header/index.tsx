@@ -1,9 +1,10 @@
-import { useState, type FC, type RefObject } from "react"
+import { useState, useEffect, type FC, type RefObject } from "react"
 import "./header.css"
 import "../../../index.css"
 import DropDownMenu from "../dropDown"
 import { Link } from "react-router-dom"
 import YMWLogo from "../../../assets/ymw_logo.svg?react"
+import { useLocation } from "react-router-dom"
 
 
 type HeaderProps = {
@@ -13,10 +14,15 @@ type HeaderProps = {
 const Header: FC<HeaderProps> = ({headerRef}) => {
 
   const [menuIsOpen, setMenuOpen] = useState<boolean>(false)
+  const location = useLocation()
 
   const handleOpenMenu = () => {
     setMenuOpen(prev => !prev)
   }
+
+  useEffect(() => {
+    setMenuOpen(false)
+  }, [location.pathname])
 
 
   return (
@@ -28,16 +34,18 @@ const Header: FC<HeaderProps> = ({headerRef}) => {
           onClick={handleOpenMenu} 
           className={`burger-menu-box ${(menuIsOpen) ? "burger-menu__effect" : ""}`}
         >
-
           <span 
             className={`burger-menu__item ${(menuIsOpen) ? "burger-menu__item-efffect" : ""}`} 
-            style={{backgroundColor: `${menuIsOpen ? '#fff' : ''}`}}></span>
+            style={{backgroundColor: `${menuIsOpen ? '#fff' : ''}`}}>
+          </span>
           <span 
             className={`burger-menu__item ${(menuIsOpen) ? "burger-menu__item-efffect" : ""}`} 
-            style={{backgroundColor: `${menuIsOpen ? '#fff' : ''}`}}></span>
+            style={{backgroundColor: `${menuIsOpen ? '#fff' : ''}`}}>
+          </span>
           <span 
             className={`burger-menu__item ${(menuIsOpen) ? "burger-menu__item-efffect" : ""}`} 
-            style={{backgroundColor: `${menuIsOpen ? '#fff' : ''}`}}></span>
+            style={{backgroundColor: `${menuIsOpen ? '#fff' : ''}`}}>
+          </span>
 
         </div>
 
