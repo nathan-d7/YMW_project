@@ -2,10 +2,6 @@
   padding: 60px 0 100px 0;
 }
 
-.grades-page__items-box {
- 
-}
-
 .grades-page__item {
   display: grid;
   grid-auto-rows: auto;
@@ -20,14 +16,12 @@
 } 
 
 .grades-page__item.item_1  {
-  /* grid-template-columns: minmax(200px, 800px) minmax(250px, 1fr); */
   grid-template-columns: minmax(300px, 800px) minmax(150px, 320px);
   justify-content: space-between;
 }
 
 .grades-page__item.item_2  {
   grid-template-columns: minmax(150px, 500px) 1fr minmax(150px, 500px);
-  /* background-color: rgb(156, 198, 156); */
 }
 
 .grades-page__item.item_2 > .grades-page__item-grades-box {
@@ -38,7 +32,6 @@
   width: 100%;
   justify-self: center;
   padding-bottom: 50px;
-  /* border: 2px solid black; */
 }
 
 .grades-page__item.item_2 .grades-page__item-img {
@@ -48,18 +41,12 @@
 }
 
 .grades-page__item.item_3  {
-  /* grid-template-columns: minmax(300px, 900px) minmax(200px, 1fr); */
   grid-template-columns: minmax(300px, 900px) minmax(200px, 350px);
   justify-content: space-between;
-  /* background-color: rgb(223, 139, 139); */
 }
 
 .grades-page__item.item_3 > .grades-page__item-grades-box {
   align-self: center;
-}
-
-.grades-page__item-grades-box {
-
 }
 
 .grades-page__item-grades-block {
@@ -106,7 +93,6 @@
   font-family: "Jost", serif;
   font-size: 24px;
   font-weight: 500;
-  /* max-width: 380px; */
   min-width: 200px;
   padding: 6px 30px;
   background-color: #E69AFF;

@@ -32,7 +32,7 @@ const Slider: FC = () => {
   }
 
   useEffect(() => {
-    setImageText(item => (item = imageText[imageIndex]))
+    setImageText( item => (item = imageText[imageIndex]))
   }, [imageIndex])
 
   return (

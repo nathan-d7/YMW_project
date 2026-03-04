@@ -13,7 +13,7 @@ const AccordionHomePage: FC = () => {
   const [hoveredPanel, setHoveredPanel] = useState<string | null>(null)
 
   const handleChange = (panel: string) => (event: React.SyntheticEvent, newExpanded: boolean) => {
-      setExpanded(newExpanded ? panel : false);
+    setExpanded(newExpanded ? panel : false);
   }
 
   const handleMouseEnter = (panel:string) => {

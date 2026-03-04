@@ -31,7 +31,6 @@
   box-shadow: none;
   padding: 24px;
   min-height: 50px;
-  /* max-height: fit-content; */
 }
 
 .accordion__item.MuiAccordion-root::before {

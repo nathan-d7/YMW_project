@@ -2,11 +2,6 @@ import { useState, type FC } from "react"
 import style from "./dropDown.module.css"
 import { useNavigate } from "react-router-dom"
 
-// type DropDownProps = {
-//   isOpen: boolean
-//   handleMouseEnter: MouseEvent,
-//   handleMouseLeave: MouseEvent
-// }
 
 const DropDownMenu: FC = () => {
 

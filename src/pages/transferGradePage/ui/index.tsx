@@ -23,7 +23,7 @@ const GradePage: FC = () => {
               <div className="grade-categs__item-icon-box">
                 <InventoryRoundedIcon />
               </div>
-              <span className="grade-categs__item-name">Планы уроков</span>
+              <span className="grade-categs__item-name">Грамматика</span>
             </div>
           </div>
 
@@ -32,7 +32,7 @@ const GradePage: FC = () => {
               <div className="grade-categs__item-icon-box">
                 <AudioFileOutlinedIcon />
               </div>
-              <span className="grade-categs__item-name">Материалы ВРД</span>
+              <span className="grade-categs__item-name">Аудио / Видео</span>
             </div>
           </div>
 
@@ -41,7 +41,7 @@ const GradePage: FC = () => {
               <div className="grade-categs__item-icon-box">
                 <CollectionsBookmarkOutlinedIcon />
               </div>
-              <span className="grade-categs__item-name">Учебные пособия</span>
+              <span className="grade-categs__item-name">Лексика</span>
             </div>
           </div>
 

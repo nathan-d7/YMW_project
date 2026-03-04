@@ -13,7 +13,6 @@ const ArticlesPreview: FC = () => {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [sliderHidden, setSliderHidden] = useState<boolean>(true)
-  const articlesIndexes = articles.map((_, index) => index)
   const [slideIndex, setSlideIndex] = useState<number>(0)
   const sliderBoxRef = useRef<HTMLDivElement | null>(null)
   const sliderItemRef = useRef<HTMLElement | null>(null)
