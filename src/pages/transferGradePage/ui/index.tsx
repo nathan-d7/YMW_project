@@ -6,6 +6,7 @@ import AudioFileOutlinedIcon from '@mui/icons-material/AudioFileOutlined'
 import CollectionsBookmarkOutlinedIcon from '@mui/icons-material/CollectionsBookmarkOutlined'
 import LightbulbOutlinedIcon from '@mui/icons-material/LightbulbOutlined'
 import { useParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 const GradePage: FC = () => {
 
@@ -18,14 +19,16 @@ const GradePage: FC = () => {
 
         <div className="grade-categs__box">
 
-          <div className="grade-categs__item lesson-plans">
-            <div className="grade-categs__item-content">
-              <div className="grade-categs__item-icon-box">
-                <InventoryRoundedIcon />
+          <Link to={`grammar`}>
+            <div className="grade-categs__item lesson-plans">
+              <div className="grade-categs__item-content">
+                <div className="grade-categs__item-icon-box">
+                  <InventoryRoundedIcon />
+                </div>
+                <span className="grade-categs__item-name">Грамматика</span>
               </div>
-              <span className="grade-categs__item-name">Грамматика</span>
             </div>
-          </div>
+          </Link>
 
           <div className="grade-categs__item materials">
             <div className="grade-categs__item-content">
