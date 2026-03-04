@@ -2,7 +2,6 @@ import express, { json } from 'express'
 import cors from 'cors'
 import multer, { diskStorage } from 'multer'
 import path from 'path'
-import { randomUUID } from 'crypto'
 
 const app = express()
 app.use(json())
