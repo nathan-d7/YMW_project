@@ -68,7 +68,11 @@
   }
 }
 
-@media(max-width: 861px) {
+@media(max-width: 601px) {
+  .form-modal__box {
+    min-width: 60%;
+  }
+
   .form-modal__img {
     width: 70%;
   }

@@ -38,10 +38,6 @@
 }
 
 @media (max-width: 1024px) {
-	/* .about__img {
-		width: 100%;
-	} */
-
 	.about__info-box {
 		flex: 1;
 	}

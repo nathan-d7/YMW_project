@@ -4,6 +4,7 @@ import "../../../index.css"
 import ladder_1 from "../../../assets/images/gradesImages/ladder_1.png"
 import ladder_2 from "../../../assets/images/gradesImages/ladder_2.png"
 import ladder_3 from "../../../assets/images/gradesImages/ladder_3.png"
+import { Link } from "react-router-dom"
 
 const GradesPage: FC = () => {
 
@@ -15,13 +16,12 @@ const GradesPage: FC = () => {
 
         <div className="grades-page__items-box">
 
-          {/* <div className={`${style["grades-page__item"]} ${"item_1"}`}> */}
           <div className="grades-page__item item_1">
             <div className="grades-page__item-grades-box">
               <div className="grades-page__item-grades-block"></div>
               <div className="grades-page__item-grades">
-                <span className="grades-page__grade">3 класс</span>
-                <span className="grades-page__grade">4 класс</span>
+                <Link to={'/grades/3'} className="grades-page__grade">3 класс</Link>
+                <Link to={'/grades/4'} className="grades-page__grade">4 класс</Link>
               </div>
             </div>
 
@@ -34,8 +34,8 @@ const GradesPage: FC = () => {
             <div className="grades-page__item-grades-box">
               <div className="grades-page__item-grades-block"></div>
               <div className="grades-page__item-grades">
-                <span className="grades-page__grade">5 класс</span>
-                <span className="grades-page__grade">6 класс</span>
+                <Link to={'/grades/5'} className="grades-page__grade">5 класс</Link>
+                <Link to={'/grades/6'} className="grades-page__grade">6 класс</Link>
               </div>
             </div>
 
@@ -46,8 +46,8 @@ const GradesPage: FC = () => {
             <div className="grades-page__item-grades-box">
               <div className="grades-page__item-grades-block"></div>
               <div className="grades-page__item-grades">
-                <span className="grades-page__grade">7 класс</span>
-                <span className="grades-page__grade">8 класс</span>
+                <Link to={'/grades/7'} className="grades-page__grade">7 класс</Link>
+                <Link to={'/grades/8'} className="grades-page__grade">8 класс</Link>
               </div>
             </div>
           </div>
@@ -56,9 +56,9 @@ const GradesPage: FC = () => {
             <div className="grades-page__item-grades-box">
               <div className="grades-page__item-grades-block"></div>
               <div className="grades-page__item-grades">
-                <span className="grades-page__grade">9 класс</span>
-                <span className="grades-page__grade">10 класс</span>
-                <span className="grades-page__grade">11 класс</span>
+                <Link to={'/grades/9'} className="grades-page__grade">9 класс</Link>
+                <Link to={'/grades/10'} className="grades-page__grade">10 класс</Link>
+                <Link to={'/grades/11'} className="grades-page__grade">11 класс</Link>
               </div>
             </div>
 

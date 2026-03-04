@@ -1,7 +1,7 @@
 import { useState, type FC } from "react"
 import "../../../index.css"
 import "./aboutPage.css"
-import aboutUsImg from "../../../assets/images/about_us.png"
+import aboutUsImg from "../../../assets/images/aboutUsImages/about_us.png"
 
 const AboutPage: FC = () => {
 

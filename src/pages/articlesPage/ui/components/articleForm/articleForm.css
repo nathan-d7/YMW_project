@@ -31,7 +31,7 @@
 
 .article-form__info-text:nth-child(2)::after {
   display: block;
-  content: url("../../../../../assets/arrow_right_ico.png");
+  content: url("../../../../../assets/icons/arrow_right_ico.png");
   width: 60px;
   margin-left: 12px;
 }
@@ -50,9 +50,12 @@
 }
 
 .article-form__item .MuiOutlinedInput-root {
-  /* width: 100%; */
   border-radius: 12px;
-  /* border: 1px solid rgba(0, 0, 0, 0.7); */
+}
+
+.article-form__item .MuiInputLabel-root {
+  font-family: "Jost", serif;
+  font-size: 18px;
 }
 
 .article-form__item .MuiOutlinedInput-root.Mui-focused {
@@ -77,6 +80,73 @@
 
 .article-form__send-btn {
   margin: 0 auto;
+}
+
+.article-form__send-files-box {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.article-form__send-files {
+  display: none;
+}
+
+.article-form__send-files-btn {
+  display: block;
+  position: relative;
+  width: 130px;
+  height: 42px;
+  border-radius: 10px;
+  border: 0.3px solid #000;
+}
+
+.article-form__send-files-label,
+.article-form__file-uploaded-text {
+  font-family: "Istok Web", serif;
+  font-weight: 500;
+}
+
+.article-form__send-files-label {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  position: absolute;
+  padding-inline: 6px;
+  border-radius: 10px;
+  background-color: #ff799bd3;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  line-height: 40px;
+  cursor: pointer;
+  transition: filter .2s linear;
+}
+
+.article-form__send-files-label:hover {
+  filter: opacity(0.6);
+}
+
+.article-form__file-uploaded-text-box {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.article-form__file-uploaded-text,
+.article-form__file-uploaded_cancel {
+  color: #FF799B;
+}
+
+.article-form__file-uploaded_cancel {
+  font-size: 22px;
+  transform-origin: 50%;
+  transform: rotateZ(45deg);
+  cursor: pointer;
 }
 
 
@@ -127,10 +197,15 @@
     display: inline-block;
   }
 
+  .article-form__send-files-box,
   .article-form__send-btn {
-    width: 100%;
-    display: flex;
     justify-content: flex-start;
+  }
+
+  .article-form__send-btn {
+    display: flex;
+    justify-items: flex-start;
+    margin-inline: 0;
   }
 
 }
@@ -140,7 +215,14 @@
     font-size: 20px;
   }
 
+  .article-form__send-files-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
  .article-form__info-text:first-child {
     max-width: 100%;
   }
+
 } 
+

@@ -7,6 +7,7 @@ const ArticlesPage = lazy(() => import('./pages/articlesPage'))
 const AboutPage = lazy(() => import('./pages/aboutPage'))
 const SubscriptionPage = lazy(() => import('./pages/subscriptionPage'))
 const GradesPage = lazy(() => import('./pages/gradesPage'))
+const GradePage = lazy(() => import('./pages/transferGradePage'))
 
 const Router: FC = () => {
   return (
@@ -16,6 +17,7 @@ const Router: FC = () => {
        <Route path="about" element={<Suspense><AboutPage /></Suspense>} />
        <Route path="subscription" element={<Suspense><SubscriptionPage /></Suspense>} />
        <Route path="grades" element={<Suspense><GradesPage /></Suspense>} />
+       <Route path="grades/:grade" element={<Suspense><GradePage /></Suspense>} />
     </Routes>
   )
 }

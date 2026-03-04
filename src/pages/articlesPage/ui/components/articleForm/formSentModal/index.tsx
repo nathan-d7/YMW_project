@@ -1,4 +1,4 @@
-import type { FC } from "react"
+import { type FC } from "react"
 import formImg from "../../../../../../assets/images/formModalImages/form_modal_bg.png"
 import "./formModal.css"
 import { IconButton } from "@mui/material"

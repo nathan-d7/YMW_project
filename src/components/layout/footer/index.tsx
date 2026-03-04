@@ -1,11 +1,11 @@
 import type { FC } from "react"
 import style from "./footer.module.css"
 import "../../../index.css"
-import YMWLogo from "../../../assets/ymw_logo.svg?react"
+import YMWLogo from "../../../assets/icons/ymw_logo.svg?react"
 import { Link } from "react-router-dom"
 import InstagramIcon from '@mui/icons-material/Instagram'
 import TelegramIcon from '@mui/icons-material/Telegram'
-import ViberIcon from "../../../assets/viber_icon.svg?react"
+import ViberIcon from "../../../assets/icons/viber_icon.svg?react"
 
 type FooterProps = {
   onScrollToSection: () => void
@@ -23,7 +23,6 @@ const Footer: FC<FooterProps> = ({onScrollToSection}) => {
             </Link>
           </div>
           <div className={style["footer__info-left-box"]}>
-            {/* <ul className={style["footer__info-left-box"]}> */}
             <ul>
               <li className={style["footer__info-item"]}>
                 Your Magic Wand 2026
@@ -44,7 +43,6 @@ const Footer: FC<FooterProps> = ({onScrollToSection}) => {
             </ul>
           </div>
           <div className={style["footer__info-right-box"]}>
-            {/* <ul className={style["footer__info-box"]}> */}
             <ul>
               <Link to={"/about"} className={`${style["footer__info-link"]} ${style["footer__info-item"]}`}>
                 <li className={style["footer__info-item"]}>

@@ -23,7 +23,10 @@
 }
 
 .aboutUs-page__image-bottom-filler {
-  background-color: rgba(202, 202, 202, 0.5);
+  background-image: url("../../../assets/images/aboutUsImages/about_us_filler.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   border-bottom-left-radius: 12px;
 }
 
@@ -53,7 +56,7 @@
   width: 18px;
   height: 18px;
   object-fit: cover;
-  background-image: url('../../../assets/images/star_marker.png');
+  background-image: url('../../../assets/images/aboutUsImages/star_marker.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

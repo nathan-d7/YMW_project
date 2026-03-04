@@ -14,7 +14,6 @@ const Promo: FC<promoImageProp> = ({promoImage}) => {
     return (
 
       <section className="promo">
-        {/* <div className={`${style['promo__content-container']} ${'container'}`} style={{backgroundImage: `url(${promoImage ? "promoBgMain" : promoBgSup})`}}> */}
         <div className={`promo__content-container ${promoImage ? "" : "changed-bg"} container`}>
           <div className="promo__content-box">
             <TextStyler text={promoHeader} style={"promo__header"}/>

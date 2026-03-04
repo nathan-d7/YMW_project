@@ -3,7 +3,7 @@ import "./header.css"
 import "../../../index.css"
 import DropDownMenu from "../dropDown"
 import { Link } from "react-router-dom"
-import YMWLogo from "../../../assets/ymw_logo.svg?react"
+import YMWLogo from "../../../assets/icons/ymw_logo.svg?react"
 import { useLocation } from "react-router-dom"
 
 
@@ -58,10 +58,9 @@ const Header: FC<HeaderProps> = ({headerRef}) => {
             <li className="header__nav-item">О нас</li>
           </Link>
           <li className="header__nav-item">
-            <Link to={'grades'}>
-              <DropDownMenu />
-            </Link>
+            <DropDownMenu />
           </li>
+
           <Link to={'articles'}>
             <li className="header__nav-item">Статьи</li>
           </Link>
