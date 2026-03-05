@@ -18,7 +18,7 @@ const GrammarMaterialsTable: FC = () => {
   }, [])
 
   const getMaterials = async () => {
-    const responce =  await axios.get('http://localhost:5050/grammar7')
+    const responce =  await axios.get('http://localhost:5050/materials/grade7/grammar7')
     const data = responce.data
     setMaterials(data)
   }
