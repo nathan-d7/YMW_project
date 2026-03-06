@@ -45,7 +45,7 @@
 
 .accordion__item-text.MuiAccordionDetails-root {
   padding-left: 0;
-  min-height: 250px;
+  min-height: 200px;
   font-family: "Jost", serif;
   font-size: 17px;
   font-weight: 500;
@@ -62,6 +62,10 @@
 @media (max-width: 768px) {
   .accordion-box {
     grid-template-columns: 1fr;
+  }
+
+  .accordion__item-text.MuiAccordionDetails-root {
+    min-height: 150px;
   }
 }
 
