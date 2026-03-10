@@ -5,7 +5,7 @@ import { type Article } from "../../../types/Article.ts"
 import { getArticles } from "../../../api/articlesApi/articlesApi.ts"
 import FavoriteIcon from '@mui/icons-material/Favorite'
 import ArticleForm from "./components/articleForm/index.tsx"
-import SliderButton from "../../../shared/ui/sliderButtons/sliderButton.tsx"
+import SliderButton from "../../../shared/utils/sliderButtons/sliderButton.tsx"
 import { useWindowSize } from "../../../hooks/windowSizeHook/windowSize.ts"
 
 

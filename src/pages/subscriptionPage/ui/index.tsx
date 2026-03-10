@@ -1,7 +1,7 @@
 import type { FC } from "react"
 import style from "./subscription.module.css"
 import "../../../index.css"
-import { formatPrice } from "../../../shared/ui/formatPrice/formatPrice"
+import { formatPrice } from "../../../shared/utils/formatPrice/formatPrice"
 
 const SubscriptionPage: FC = () => {
   return (

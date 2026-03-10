@@ -1,7 +1,7 @@
 import type { FC } from "react"
 import style from "./aboutHomePage.module.css"
 import "../../../index.css"
-import DefaultBtn from "../../../shared/ui/defaultButton/defaultButton"
+import DefaultBtn from "../../../shared/utils/defaultButton/defaultButton"
 import aboutImage from "../../../assets/images/aboutUsImages/about_home_page.png"
 import { Link } from "react-router-dom"
 

@@ -13,12 +13,12 @@ const GrammarMaterialsTable: FC = () => {
 
   const [materials, setMaterials] = useState<any[]>([])
 
-   useEffect(() => {
+  useEffect(() => {
     getMaterials()
   }, [])
 
   const getMaterials = async () => {
-    const responce =  await axios.get('http://localhost:5050/materials/grade7/grammar7')
+    const responce =  await axios.get('http://localhost:5050/grammar7')
     const data = responce.data
     setMaterials(data)
   }

@@ -8,7 +8,7 @@ const AboutPage = lazy(() => import('./pages/aboutPage'))
 const SubscriptionPage = lazy(() => import('./pages/subscriptionPage'))
 const GradesPage = lazy(() => import('./pages/gradesPage'))
 const GradePage = lazy(() => import('./pages/transferGradePage'))
-const GrammarMaterialsTable = lazy(() => import('./pages/materialsPage/grammarPage/index.tsx'))
+const GrammarMaterialsTable = lazy(() => import('../src/pages/materialsPage/grammarPage/index.tsx'))
 
 const Router: FC = () => {
   return (

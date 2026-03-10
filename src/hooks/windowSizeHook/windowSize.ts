@@ -6,7 +6,7 @@ export function useWindowSize() {
 
   useEffect(() => {
     function handleResize() {
-      setWindowSize(window.innerWidth);
+      setWindowSize(window.innerWidth)
     }
     window.addEventListener("resize", handleResize)
     handleResize()

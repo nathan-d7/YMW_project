@@ -34,19 +34,19 @@ app.post('/upload', upload.single('formFiles'), (req, res) => {
 })
 
 
-const materialsDir = path.resolve('materials', 'grade7', 'grammar7')
+const materialsDir = path.resolve(import.meta.dirname, 'materials', 'grade7', 'grammar7')
 const materialsJson = path.join(materialsDir, 'materials.json')
 
 console.log(materialsDir)
 console.log(materialsJson)
 
-app.get(`${materialsDir}`, (req, res) => {
+app.get('/grammar7', (req, res) => {
   const data = fs.readFileSync(materialsJson, 'utf-8')
   res.json(JSON.parse(data))
 })
 
 
-app.get(`/file_download`, (req, res) => {
+app.get('/file_download', (req, res) => {
   const { id } = req.params
 
   const data = JSON.parse(fs.readFileSync(materialsJson, 'utf-8'))
