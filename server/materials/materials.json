@@ -1,0 +1,233 @@
+[
+  {
+    "category": [
+      {
+        "id": "g6-gr-1",
+        "grade": "6",
+        "type": "grammar"
+      }
+    ],
+    "materialType": [
+      {
+        "id": "g6-gr-1",
+        "typeInfo": [
+          {
+            "type": "worksheet",
+            "color": "#4f4f4f",
+            "backgroundColor": "#fde674"
+          }
+        ]
+      }
+    ],
+    "material": [
+      {
+        "id": "g6-gr-1",
+        "title": "Modal verb have to",
+        "unit": "2",
+        "lesson": "5",
+        "originalName": "have_to.docx",
+        "fileType": "docx",
+        "categoryId": "g6-gr-1",
+        "srcLink": ""
+      }
+    ]
+  },
+  {
+    "category": [
+      {
+        "id": "g6-vocab-2",
+        "grade": "6",
+        "type": "vocabulary"
+      }
+    ],
+    "materialType": [
+      {
+        "id": "g6-vocab-2",
+        "typeInfo": [
+          {
+            "type": "link",
+            "color": "#4f4f4f",
+            "backgroundColor": "#DDF3FD"
+          }
+        ]
+      }
+    ],
+    "material": [
+      {
+        "id": "g6-vocab-2",
+        "title": "Modal verb have to",
+        "unit": "2",
+        "lesson": "5",
+        "originalName": "",
+        "fileType": "",
+        "categoryId": "g6-vocab-2",
+        "srcLink": "https://simpleclass.ru/gapfilling/23837"
+      }
+    ]
+  },
+  {
+    "category": [
+      {
+        "id": "g7-gr-1",
+        "grade": "7",
+        "type": "grammar"
+      }
+    ],
+    "materialType": [
+      {
+        "id": "g7-gr-1",
+        "typeInfo": [
+          {
+            "type": "worksheet",
+            "color": "#4f4f4f",
+            "backgroundColor": "#fde674"
+          }
+        ]
+      }
+    ],
+    "material": [
+      {
+        "id": "g7-gr-1",
+        "title": "Past Simple Tense",
+        "unit": "1",
+        "lesson": "5",
+        "originalName": "Present_Simple_2.pdf",
+        "fileType": "pdf",
+        "categoryId": "g7-gr-1",
+        "srcLink": ""
+      }
+    ]
+  },
+  {
+    "category": [
+      {
+        "id": "g7-gr-2",
+        "grade": "7",
+        "type": "grammar"
+      }
+    ],
+    "materialType": [
+      {
+        "id": "g7-gr-2",
+        "typeInfo": [
+          {
+            "type": "worksheet",
+            "color": "#4f4f4f",
+            "backgroundColor": "#fde674"
+          }
+        ]
+      }
+    ],
+    "material": [
+      {
+        "id": "g7-gr-2",
+        "title": "Used to structure",
+        "unit": "2",
+        "lesson": "4",
+        "originalName": "used_to.docx",
+        "fileType": "docx",
+        "categoryId": "g7-gr-2",
+        "srcLink": ""
+      }
+    ]
+  },
+  {
+    "category": [
+      {
+        "id": "g7-gr-3",
+        "grade": "7",
+        "type": "grammar"
+      }
+    ],
+    "materialType": [
+      {
+        "id": "g7-gr-3",
+        "typeInfo": [
+          {
+            "type": "worksheet",
+            "color": "#4f4f4f",
+            "backgroundColor": "#fde674"
+          }
+        ]
+      }
+    ],
+    "material": [
+      {
+        "id": "g7-gr-3",
+        "title": "Present Continuous Tense",
+        "unit": "2",
+        "lesson": "3",
+        "originalName": "Present_Continuous.pdf",
+        "fileType": "pdf",
+        "categoryId": "g7-gr-3",
+        "srcLink": ""
+      }
+    ]
+  },
+  {
+    "category": [
+      {
+        "id": "g7-gr-4",
+        "grade": "7",
+        "type": "grammar"
+      }
+    ],
+    "materialType": [
+      {
+        "id": "g7-gr-4",
+        "typeInfo": [
+          {
+            "type": "worksheet",
+            "color": "#4f4f4f",
+            "backgroundColor": "#fde674"
+          }
+        ]
+      }
+    ],
+    "material": [
+      {
+        "id": "g7-gr-4",
+        "title": "Expressing the future Worksheet",
+        "unit": "7",
+        "lesson": "2",
+        "originalName": "Future_actions_(future_simple_pr_sim_pr_con) (1).docx",
+        "fileType": "docx",
+        "categoryId": "g7-gr-4",
+        "srcLink": ""
+      }
+    ]
+  },
+  {
+    "category": [
+      {
+        "id": "g7-vocab-1",
+        "grade": "7",
+        "type": "vocabulary"
+      }
+    ],
+    "materialType": [
+      {
+        "id": "g7-vocab-1",
+        "typeInfo": [
+          {
+            "type": "worksheet",
+            "color": "#4f4f4f",
+            "backgroundColor": "#fde674"
+          }
+        ]
+      }
+    ],
+    "material": [
+      {
+        "id": "g7-vocab-1",
+        "title": "What do they look like?",
+        "unit": "1",
+        "lesson": "3",
+        "originalName": "Fill_in_the_gaps_with_the_words_from_the_box_(form_7_-_U1_L3)",
+        "fileType": "docx",
+        "categoryId": "g7-vocab-1",
+        "srcLink": ""
+      }
+    ]
+  }
+]

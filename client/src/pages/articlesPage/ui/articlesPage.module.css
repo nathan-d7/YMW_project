@@ -1,0 +1,139 @@
+.articles-page {
+  padding: 60px 0 120px 0;
+  position: relative;
+}
+
+.articles-page__articles-container {
+  position: relative;
+}
+
+.articles-page__articles-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+  grid-auto-rows: minmax(350px, 480px);
+  justify-content: center;
+  gap: 40px 50px;
+}
+
+.articles-page__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 0.5px solid #000;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.articles-page__item:nth-child(2n - 1) {
+  background-color: #FDE1E2;
+}
+
+.articles-page__item-img-box {
+  height: 210px;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.articles-page__item-img {
+  display: block;
+  object-fit: contain;
+  margin: 0 auto;
+  max-height: 210px;
+}
+
+.articles-page__item-title {
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.articles-page__item-descr {
+  font-size: 18px;
+  line-height: 26px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+.articles-page__item-likes-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-self: center;
+}
+
+.articles-page__item-like {
+  font-size: 18px;
+  font-weight: 600;
+  width: 24px;
+  height: 24px;
+}
+
+.articles-page__item-like:hover path {
+  cursor: pointer;
+}
+
+.articles-page__item-like-number {
+  font-size: 20px;
+}
+
+@media (max-width: 780px) {
+  .articles-page__title {
+    text-align: center;
+  }
+
+  .articles-page__articles-box  {
+    grid-template-columns: repeat(auto-fit, minmax(325px, 80%));
+  }
+}
+
+@media(max-width: 601px) {
+  .articles-page__title {
+    text-align: left;
+  }
+
+  .articles-page__articles-box {
+    /* position: relative; */
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fit, 60%);
+    grid-auto-columns: 60%;
+    column-gap: 20px;
+    justify-content: unset;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+
+  .articles-page__item-info-box,
+  .articles-page__item-likes-box {
+    margin: 0 12px;
+  }
+  
+}
+
+@media(max-width: 480px) {
+  .articles-page__title {
+    text-align: center;
+  }
+
+  .articles-page__articles-box {
+    grid-template-columns: repeat(auto-fit, 100%);
+     grid-auto-columns: 100%;
+    gap: 0;
+    justify-content: stretch;
+  }
+
+@media (max-width: 400px) {
+  .articles-page__title {
+    font-size: 30px;
+  }
+}
+
+}

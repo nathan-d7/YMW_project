@@ -1,0 +1,81 @@
+.materials-page {
+  padding-block: 80px;
+}
+
+.materials__tableContainer {
+  padding: 20px 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px 3px #7d7c7cb4;
+}
+
+.materials__header {
+  font-family: "Jost", serif;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.materials__tableHead {
+  background-color: #d4d4d479;
+}
+
+.cell-padding {
+  padding-block: 10px;
+}
+
+.materials__content-row:first-child > .materials__cell-name:first-child {
+  border-top-left-radius: 8px;
+}
+
+.materials__content-row:first-child > .materials__cell-name:last-child {
+  border-top-right-radius: 8px;
+}
+
+.materials__content-row:nth-child(2n) {
+  background-color: #f6f6f6;
+}
+
+.materials__content-row:last-child > * {
+  border-bottom: 0px solid transparent;
+}
+
+.materials__cell-name {
+  font-size: 20px;
+  font-family: "Jost", serif;
+  color: #636363;
+  font-weight: 700;
+}
+
+.materials__cell-name:nth-child(2),
+.materials__cell-name:nth-child(3),
+.materials__cell-name:nth-child(4),
+.materials__file-unit,
+.materials__file-lesson,
+.materials__file-type {
+  text-align: center;
+}
+
+.materials__file-unit,
+.materials__file-lesson {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1F0314;
+}
+
+.materials__file-name,
+.materials__file-type-tag {
+  font-size: 1.1rem;
+  font-family: "Istok Web", "serif";
+  font-weight: 600;
+}
+
+.materials__content-row:last-child > .materials__file-name,
+.materials__content-row:last-child > .materials__file-type,
+.materials__content-row:last-child > .materials__file-download {
+  border-bottom: none;
+}
+
+.materials__file-type-tag {
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
