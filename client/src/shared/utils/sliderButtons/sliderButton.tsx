@@ -7,7 +7,7 @@ import type { CSSProperties } from "@mui/material"
 type SliderButtonProps = {
   showPrevSlide: () => void,
   showNextSlide: () => void,
-  hidden: boolean,
+  hidden?: boolean,
   style?: CSSProperties
 }
 

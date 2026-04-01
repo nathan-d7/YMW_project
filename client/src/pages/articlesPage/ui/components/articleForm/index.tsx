@@ -77,9 +77,11 @@ const ArticleForm: FC = () => {
   const {values, errors, handleChange, handleBlur, handleSubmit, handleReset, touched, isSubmitting} = formik
 
   const styledButton = {
-    backgroundColor: "#C0A5C7",
-    border: "0.3px solid #000",
-    width: "130px",
+    backgroundColor: "#fff",
+    color: "#000",
+    width: "100%",
+    paddingBlock: "6px",
+    border: "0"
   }
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -91,15 +93,25 @@ const ArticleForm: FC = () => {
 
   return (
     <Box className="article-form__container">
-      <Box className="article-form__info-box">
+      {/* <Box className="article-form__info-box">
         <Typography component={'p'} className="article-form__info-text">
           Принимаем ваши предложения для новых статей. Какая тема вас интересует?
         </Typography>
         <Typography component={'span'} className="article-form__info-text">
           Оставьте свой комментарий
         </Typography>
+      </Box> */}
+      <Box className="article-form__info-box">
+        <Box className="article-form__info-box-item">
+        </Box>
       </Box>
       <Box component={'form'} className="article-form__form-box" onSubmit={handleSubmit}>
+        <Box className="article-form__form-texts">
+          <h2 className="article-form__form-title">
+            Какая тема вас интересует? 
+          </h2>
+          <span className="article-form__form-subtext">Предложите свой материал или оставьте комментарий</span>
+        </Box>
         <Box className="article-form__form">
           <TextField
             label="Ваше имя"
@@ -121,40 +133,44 @@ const ArticleForm: FC = () => {
             onBlur={handleBlur}
             className="article-form__item" 
           />
-          <TextField
-            label="Комментарий" 
-            multiline
-            minRows={4}
-            name="comment"
-            value={values.comment}
-            onChange={handleChange}
-            error={Boolean(errors.comment) && Boolean(touched.comment)}
-            helperText={errors.comment}
-            onBlur={handleBlur}
-            className="article-form__item" 
-          />
-
-          <Box className="article-form__send-files-box">
-             <input 
-                type='file' 
-                onChange={handleInputChange} 
-                accept='.doc, .docx, .png, .jpg, .jpeg' 
-                className="article-form__send-files"
-                id="article-form__files-input"
-              />
-              <div className="article-form__send-files-btn">
-                <label htmlFor="article-form__files-input" className="article-form__send-files-label">
-                  Загрузить файл
-                </label>
-              </div>
-              {
-                file 
-                  && 
-                <div className="article-form__file-uploaded-text-box">
-                  <span className="article-form__file-uploaded-text">{file.name}</span>
-                  <span className="article-form__file-uploaded_cancel" onClick={() => setFile(undefined)}>+</span>
+          <Box className="article-form__comments-box">
+            <TextField
+              label="Комментарий" 
+              multiline
+              minRows={3}
+              maxRows={3}
+              name="comment"
+              value={values.comment}
+              onChange={handleChange}
+              error={Boolean(errors.comment) && Boolean(touched.comment)}
+              helperText={errors.comment}
+              onBlur={handleBlur}
+              className="article-form__item"
+            >
+            </TextField>
+  
+            <Box className="article-form__send-files-box">
+              <input 
+                  type='file' 
+                  onChange={handleInputChange} 
+                  accept='.doc, .docx, .png, .jpg, .jpeg' 
+                  className="article-form__send-files"
+                  id="article-form__files-input"
+                />
+                <div className="article-form__send-files-btn">
+                  <label htmlFor="article-form__files-input" className="article-form__send-files-label">
+                    <span>Загрузить</span>
+                  </label>
                 </div>
-              }
+                {
+                  file 
+                    && 
+                  <div className="article-form__file-uploaded-text-box">
+                    <span className="article-form__file-uploaded-text">{file.name}</span>
+                    <span className="article-form__file-uploaded_cancel" onClick={() => setFile(undefined)}>+</span>
+                  </div>
+                }
+            </Box>
           </Box>
 
           <div className="article-form__send-btn">

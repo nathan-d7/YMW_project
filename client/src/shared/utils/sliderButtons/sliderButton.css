@@ -3,8 +3,8 @@
   justify-content: space-between;
   width: 100%;
   position: absolute;
-  top: 54%;
-  transform: translateY(-50%);
+  top: 50%;
+  transform: translate(-50%);
   z-index: 10;
 }
 

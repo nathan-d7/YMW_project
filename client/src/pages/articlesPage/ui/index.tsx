@@ -83,9 +83,9 @@ const ArticlesPage: FC = () => {
     const minSwipeDistance = 50 
 
     if (distance > minSwipeDistance) {
-      moveCardRight({sliderElem, windowSize, parentElement: slider, slideIndex, articlesIndexes, setSlideIndex})
+      moveCardRight({sliderElem, windowSize, parentElement: slider, slideIndex, itemsIndexes: articlesIndexes, setSlideIndex, stepSize: 1})
     } else if (distance < -minSwipeDistance) {
-      moveCardLeft({sliderElem, windowSize, parentElement: slider, slideIndex, articlesIndexes, setSlideIndex})
+      moveCardLeft({sliderElem, windowSize, parentElement: slider, slideIndex, itemsIndexes: articlesIndexes, setSlideIndex, stepSize: 1})
     }
   }
 
@@ -177,8 +177,8 @@ const ArticlesPage: FC = () => {
                   // transform: `${calcSlideStep()}`
                 }}
               >
-                <div className={style["articles-page__item-img-box"]}>
-                  <img className={style["articles-page__item-img"]} src={article.image} alt={article.title} />
+                <div className={style["articles-page__item-img-box"]} style={{backgroundImage: `url(${article.image})`}}>
+                  {/* <img className={style["articles-page__item-img"]} src={article.image} alt={article.title} /> */}
                 </div>
                 <div className={style["articles-page__item-info-box"]}>
                   <span className={style["articles-page__item-title"]}>{article.title}</span>
@@ -195,8 +195,8 @@ const ArticlesPage: FC = () => {
             ))}
             {/* <SliderButton showNextSlide={showNextSlide} showPrevSlide={showPrevSlide} hidden={sliderHidden}/> */}
             <SliderButton 
-              showNextSlide={() => moveCardRight({sliderElem, windowSize, parentElement: slider, slideIndex, articlesIndexes, setSlideIndex})} 
-              showPrevSlide={() => moveCardLeft({sliderElem, windowSize, parentElement: slider, slideIndex, articlesIndexes, setSlideIndex})} 
+              showNextSlide={() => moveCardRight({sliderElem, windowSize, parentElement: slider, slideIndex, itemsIndexes: articlesIndexes, setSlideIndex, stepSize: 1})} 
+              showPrevSlide={() => moveCardLeft({sliderElem, windowSize, parentElement: slider, slideIndex, itemsIndexes: articlesIndexes, setSlideIndex, stepSize: 1})} 
               hidden={sliderHidden}
             />
           </ul>

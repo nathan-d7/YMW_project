@@ -1,26 +1,107 @@
 .subscr-page {
-  padding-block: 120px;
+  padding: 120px 0 150px 0;
+}
+
+.subscr__title {
+  margin-bottom: 100px;
 }
 
 .subscr__items-box {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 374px));
+  grid-auto-columns: auto;
+  grid-auto-flow: row;
+  grid-auto-rows: auto;
   justify-content: center;
-  gap: 70px;
+  gap: 20px;
 }
 
 .subscr__item {
-  flex-grow: 0;
-  flex-shrink: 1;
-  border: 1px solid #A4A0A0;
-  border-radius: 12px;
-  box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.37);
-  text-align: center;
-  font-size: 18px;
-  padding-bottom: 45px;
-  max-width: 380px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(3, auto);
+  justify-items: center;
+  padding: 35px 11px 20px 11px;
+  flex-grow: 1;
+  max-width: 374px;
+  background-color: #FCF9F9;
+  box-shadow: 0 0 3px rgba(0, 0, 0, .25);
+  border-radius: 10px;
+  position: relative;
 }
 
-.subscr__item.free-package {
+.subscr__item:first-child::after {
+  display: block;
+  content: url('../../../assets/images/flameyEmotions/flamey_surprised.png');
+  position: absolute;
+  bottom: -10%;
+  left: -22%;
+}
+
+.subscr__item:nth-child(2)::after {
+  display: block;
+  content: url('../../../assets/images/flameyEmotions/flamey_sitting.png');
+  position: absolute;
+  top: -33%;
+  right: 1%;
+}
+
+.subscr__item:last-child::after {
+  display: block;
+  content: url('../../../assets/images/flameyEmotions/flamey_pointing.png');
+  position: absolute;
+  bottom: -10%;
+  right: -25%;
+}
+
+.subscr__item-title {
+  font-weight: 500;
+  font-family: "Jost", serif;
+  font-size: 20px;
+}
+
+.free-package-ico-box {
+  margin-block: 35px;
+}
+
+.subscr__item-descr {
+  font-size: 15px;
+  text-align: center;
+  font-weight: 500;
+}
+
+span.decorated {
+  color: #FF7B9C;
+}
+
+.subscr__item-button {
+  display: flex;
+  align-items: center;
+  margin-top: 35px;
+  padding: 3px 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  text-align: center;
+  border: 0.7px solid rgba(0, 0, 0, .5);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+  cursor: pointer;
+}
+
+.subscr__item-button-text {
+  display: flex;
+  align-items: center;
+}
+
+.subscr__item-button-text::after {
+  display: inline-block;
+  /* vertical-align: sub; */
+  width: 16px;
+  height: 16px;
+  margin-left: 16px;
+  content: url('../../../assets/images/pricesImages/subscribe_btn.png');
+}
+
+/* .subscr__item.free-package {
   background-color: rgba(255, 184, 186, 0.2);
 }
 
@@ -127,9 +208,9 @@
 
 .subscr__button:hover {
   box-shadow: 0 4px 12px 3px  rgba(255, 184, 186, 0.2);
-}
+} */
 
-@media (max-width: 1280px) {
+/* @media (max-width: 1280px) {
   .subscr__items-box {
     gap: 10px;
     justify-content: space-between;
@@ -197,4 +278,4 @@
   .subscr__item-title {
     font-size: 22px;
   }
-}
+} */
