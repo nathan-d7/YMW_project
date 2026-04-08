@@ -22,7 +22,7 @@
   background-color: #FFEEEF;
   border-radius: 10px;
   border: 1px solid #000;
-  box-shadow: 0 4px 21px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 10px 1px rgba(0, 0, 0, 0.25);
   background-repeat: no-repeat;
   background-position: center left 5%;
   transition: all .5s ease;

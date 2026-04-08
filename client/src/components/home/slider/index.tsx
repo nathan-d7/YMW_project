@@ -109,7 +109,6 @@ const Slider: FC = () => {
           <SliderButton 
             showNextSlide={showNextSlide}
             showPrevSlide={showPrevSlide}
-            style={{left: "50%"}}
           />
           <div className={style["slider__img-picker"]}>
             {imageURLs.map((_, index) => (

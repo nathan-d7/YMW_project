@@ -23,7 +23,8 @@ const Layout: FC = () => {
       setPromoImage(true)
     }
 
-    if(location.pathname.includes('/articles')) {
+    
+    if(location.pathname.includes('/articles') || location.pathname.includes('/subscription') || location.pathname.includes('/grades/')) {
       setPromoType("new")
       setPagePathname(prev => {
         const name = location.pathname.split('/')

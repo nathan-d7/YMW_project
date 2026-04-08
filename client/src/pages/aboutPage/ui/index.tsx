@@ -1,7 +1,8 @@
 import { useState, type FC } from "react"
 import "../../../index.css"
 import "./aboutPage.css"
-import aboutUsImg from "../../../assets/images/aboutUsImages/about_us.png"
+import aboutUsWomanImg from "../../../assets/images/aboutUsImages/about_us.png"
+import aboutUsManImg from "../../../assets/images/aboutUsImages/about_us_man.png"
 
 const AboutPage: FC = () => {
 
@@ -17,8 +18,9 @@ const AboutPage: FC = () => {
         <h2 className="aboutUs-page__title pageTitle">О нас</h2>
         <div className="aboutUs-page__content-box">
           <div className="aboutUs-page__image-box">
-            <img className="aboutUs-page__image" src={aboutUsImg} />
-            <div className="aboutUs-page__image-bottom-filler"></div>
+            <img className="aboutUs-page__image" src={aboutUsWomanImg} />
+            <img className="aboutUs-page__image" src={aboutUsManImg} />
+            {/* <div className="aboutUs-page__image-bottom-filler"></div> */}
           </div>
 
           <div className="aboutUs-page__text-box">

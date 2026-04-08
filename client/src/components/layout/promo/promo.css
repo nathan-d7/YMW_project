@@ -10,8 +10,8 @@
 }
 
 .promo__logo.new {
-  width: 80px;
-  height: 80px;
+  width: 160px;
+  height: 200px;
 }
 
 .promo__content-container {
@@ -26,6 +26,7 @@
 
 .promo__content-container.new {
   align-items: center;
+  position: relative;
 }
 
 .changed-bg {
@@ -36,6 +37,12 @@
 .promo__content-box {
   flex: 0.42;
   height: 100%;
+}
+
+.promo__logo-box {
+  position: absolute;
+  bottom: -56%;
+  right: 6%;
 }
 
 .promo__content-box.new {

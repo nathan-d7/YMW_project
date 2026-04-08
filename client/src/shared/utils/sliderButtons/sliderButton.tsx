@@ -1,6 +1,6 @@
 import { type FC } from "react"
-import ArrowBackIosNewSharpIcon from '@mui/icons-material/ArrowBackIosNewSharp'
-import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp'
+import ArrowBackIosRoundedIcon from '@mui/icons-material/ArrowBackIosRounded'
+import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded'
 import "./sliderButton.css"
 import type { CSSProperties } from "@mui/material"
 
@@ -16,11 +16,35 @@ const SliderButton: FC<SliderButtonProps> = ({showPrevSlide, showNextSlide, hidd
   return (
     <div className={hidden ? "slider-buttons-box_hidden " : "slider-buttons-box"} style={style}>
       <button onClick={showPrevSlide} className="slider-btn slider__prev-btn">
-        <ArrowBackIosNewSharpIcon fontSize="medium"/>
+        <ArrowBackIosRoundedIcon 
+          className="icon_front" 
+          sx={{fontSize: 30, stroke: "#000", strokeWidth: 0.5}}
+        />
+        <ArrowBackIosRoundedIcon 
+          className="icon_back"
+          sx={{
+            fontSize: 30,
+            fill: "transparent", 
+            stroke: "#ccc", 
+            strokeWidth: 2.5
+          }}
+        />
       </button>
 
        <button onClick={showNextSlide} className="slider-btn slider__next-btn">
-        <ArrowForwardIosSharpIcon fontSize="medium"/>
+        <ArrowForwardIosRoundedIcon 
+          className="icon_front" 
+          sx={{fontSize: 30, stroke: "#000", strokeWidth: 0.5}}
+        />
+        <ArrowForwardIosRoundedIcon 
+          className="icon_back" 
+          sx={{
+            fontSize: 30,
+            fill: "transparent",
+            stroke: "#ccc",
+            strokeWidth: 2.5
+          }}
+        />
       </button>
     </div>
   )

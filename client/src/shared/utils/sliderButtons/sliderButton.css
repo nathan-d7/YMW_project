@@ -4,6 +4,7 @@
   width: 100%;
   position: absolute;
   top: 50%;
+  left: 50%;
   transform: translate(-50%);
   z-index: 10;
 }
@@ -14,24 +15,42 @@
 
 .slider-btn {
   all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  margin-inline: 12px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
   transition: all .2s ease-in-out;
-  margin-inline: 0;
+  position: relative;
 }
 
-.slider-btn > svg {
-  transform: translate(35%, 15%);
+.slider-btn .icon_font {
+  position: relative;
+  z-index: 2;
 }
 
-.slider-btn > *,
+.slider-btn .icon_back {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.slider__next-btn .icon_back {
+  left: 30%;
+}
+
+.slider__prev-btn .icon_back {
+  left: -6%;
+}
+
+/* .slider-btn > *,
 .slider-btn > * > * path > {
   stroke: #414141;
   fill: #414141;
-}
+} */
 
 .slider-btn:hover {
   background-color: rgba(238, 238, 238, 0.516);
